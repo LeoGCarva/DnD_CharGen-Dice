@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+
+body {
+    background-image: url("./assets/PlanoFundo.jpg");
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+button {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background: none;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(161, 161, 161);
+}
+.container {
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 7px;
+    padding: 15px 30px;
+    backdrop-filter: blur(15px);
+}
+
+.char {
+    color: white;
+    font-size: 20px;
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row > p {
+    padding: 0;
+}
+
+.row > button {
+    border: none;
+    padding: 0;
+    width: 50px;
+}
+
+header {
+    display: flex;
+    gap: 25px;
+}
+
+.hide {
+    display: none;
+}
