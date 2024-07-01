@@ -1,26 +1,25 @@
-const charGenBtn = document.querySelector(".char_gen");
-const charPage = document.querySelector(".char")
+import { charGenBtn, charPage, name, nameBtn, race, raceBtn, charClass, classBtn } from './const.js'
 
-const name = document.querySelector(".p_name");
-const nameBtn = document.querySelector(".btn_name");
-const race = document.querySelector(".p_race");
-const raceBtn = document.querySelector(".btn_race")
-const charClass = document.querySelector(".p_class");
-const classBtn = document.querySelector(".btn_class")
-
-
+nameBtn.addEventListener('click', randomName);
 classBtn.addEventListener('click', randomClass);
 raceBtn.addEventListener('click', randomRace);
 charGenBtn.addEventListener('click', generateChar);
 
 function randomRace() {
     const races = ['Dragonborn', 'Dwarf', 'Elf', 'Gnome', 'Half-Elf', 'Halfling', 'Half-Orc', 'Human', 'Tiefling'];
-    race.innerHTML = 'Race: ' + races[Math.floor(Math.random() * 9)];
+    race.innerHTML = 'Race: ' + races[Math.floor(Math.random() * races.length)];
 }
 
 function randomClass(){
     const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
-    charClass.innerHTML = 'Class: ' + classes[Math.floor(Math.random() * 12)];
+    charClass.innerHTML = 'Class: ' + classes[Math.floor(Math.random() * classes.length)];
+}
+
+function randomName(){
+    const names = ['Arthur', 'Lancelot', 'Gawain', 'Tristan', 'Galahad', 'Percival', 'Merlin', 'Godefroy', 'Hugues', 'Geoffroy', 
+                    'Guinevere', 'Isolde', 'Morgana', 'Elaine', 'Nimue', 'Igraine', 'Eleanor', 'Melisende', 'Aveline', 'Yseult']
+    const surnames = ['Fitzgeral', 'Beauchamp', 'Montgomery', 'Percy', 'Neville', 'Devereux', 'Lancaster', 'Clifford', 'Mortimer', 'Fitzroy']
+    name.innerHTML = 'Name: ' + names[Math.floor(Math.random() * names.length)] + ' ' + surnames[Math.floor(Math.random() * surnames.length)]
 }
 
 function generateChar(){
@@ -28,5 +27,6 @@ function generateChar(){
     
     randomRace();
     randomClass();
+    randomName();
 }
 
