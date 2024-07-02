@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asar&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -32,11 +34,20 @@
             </div>
         </div>
 
-        <div class="dice">
-            
+        <div class="hide dice">
+            <select class="dices">
+                <option value="d4">d4</option>
+                <option value="d6">d6</option>
+                <option value="d8">d8</option>
+                <option value="d12">d12</option>
+                <option value="d20">d20</option>
+                <option value="d100">d100</option>
+            </select>
+            <button class="throw">Throw</button>
         </div>
+        <p class="dice_result"></p>
     </div>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

@@ -12,6 +12,11 @@ body {
     place-items: center;
 }
 
+header {
+    display: flex;
+    gap: 25px;
+}
+
 button {
     padding: 15px;
     font-size: 20px;
@@ -57,9 +62,37 @@ button:hover {
     width: 50px;
 }
 
-header {
-    display: flex;
+.dice {
+    margin: 30px 0px;
     gap: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dice > select {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    background: none;
+    color: white;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 7px;
+}
+
+select > option {
+    font-family: "Asar", serif;
+    color: black;
+    place-items: center;
+}
+
+.dice_result {
+    font-family: "Asar", serif;
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .hide {
